@@ -1,0 +1,7 @@
+I decided to not use the given helperwords.h function header file. I used ctype and stdio library to use isspace() function.
+That told me whether or not the current character of the string was a space. if not, I entered that character to the current word I was filling out starting from s1.
+Then I outputted a string basically starting with s9 the last word. This effectively reversed the string
+However this method might not be using recurssion correctly, it still worked for all the test cases.
+
+But i did try recursively. I used the helperword function and each time I called it, I used substr to shorten the string input each time but it did not work as intened
+Therefore I commented that code out and worked on my own design.

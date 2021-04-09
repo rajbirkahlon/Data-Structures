@@ -1,0 +1,7 @@
+if the string is just one letter or none, it IS a palindrome
+	else check if the first and last letter are the same
+		if they're not, it's not a palindrome	
+			if they are, drop the first and last letter and check again
+			
+		
+		time complexity of code in O(n)

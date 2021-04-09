@@ -1,0 +1,25 @@
+binaryToDec {
+int s1 = 0;
+String s_out;
+Stack <int> stack;
+Int j = 0;
+s1 // 1111
+For(int I =0; i<s1; i++) {
+stack.push(twoExponent(I,j));
+j++;
+}
+while(!empty()) {
+int m = 0;
+m=m+stack.top();
+stack.pop();
+}
+s_out = m;
+return s_out;
+}
+
+
+Int twoExponent(int I, int j) {
+If(i=1)
+Return 2^j;
+Else return 0;
+}

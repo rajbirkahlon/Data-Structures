@@ -1,0 +1,24 @@
+The exponential search algorithm differ from regular binary search by instead of searching the whole sorted array, it truncates it by making the max index searched only where elements to the left are no longer less than the element being searched AND there aren't enough elements added yet to the array for it to be greater than the index
+The time complexity of exponential search is O(log i) where i is the place where the element is, this is better than regular binary search's O(log n)
+
+Implementation of searching algorithm:
+I decided to add another parameter to the exponential search algorithm. This is a string 'e' which can be retreived using the given read function.
+This allowed me to check the larger string for the element we want.
+so as long as our index(max point of array to search) was less than the size of the books list and the element at books[index-1] was less than the element to be found, index was doubled.
+Then binary search was implemented. The min was 0 and the max was the index we found in the previous step. The mid was computed.
+A while loop and the first if statement within it made sure we didn't loop forever if the element isn't found.
+The mid was the middle element of the at-time min and max (p and q). 
+If the element at the array was less than the element to be found, the mid was made the min
+If the element at the array was greater than the element to be found, the mid was made the max
+If found, the index where that element is stored is returned
+
+The AddBook Implementation:
+To add a book to an already sorted array, we needed to traverse to the correct place
+This was done so that we can shift over the array properly once we got to the index where the element there was bigger than the element to be added, this index was labled 'here'
+Once it was all shifted over, the desired element book was added over to the list at books[here]
+
+My Eclipse does not like me using ifstream fin(filename) as provided in the file on canvas for the read function
+Even with #include <fstream> is still gives errors and refuses to compile so I commented it out
+
+Sources: https://www.techiedelight.com/exponential-search/
+		 https://www.geeksforgeeks.org/insertion-sort/
