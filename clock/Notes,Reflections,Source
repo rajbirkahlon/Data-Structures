@@ -1,0 +1,6 @@
+Notes/Reflection/Source:
+1. I used 3 constructors. One that set each data of hour,minute, and seconds to zero. Then another was created to account for just hour and minute data being passed in and assigned to the newly created object. And the third constructor was to make the object if all 3 data types were passed it.
+2. Lines 5 and 6 did not differ much besides having to add a break line into my implmentation of the << operator. Otherwise, the format was mixed together and visually unappealing.
+3. The assignment operator was not needed to be overloaded. Only the << and + operators
+4. To be able to add a object type clockType with just the integer second (line 8), a new + operator was necessary. However, cout << sec + c1 does not work because again, the paramaters of the this operator overload function require two objects of the type clockType, so a new version of the << operator would be neccessary just like in the case of the + operator overload functions.
+5. I was unsure about how overload operator functions worked and was not sure what they were. I was able to get a better idea thanks to https://stackoverflow.com/questions/4421706/what-are-the-basic-rules-and-idioms-for-operator-overloading and https://msdn.microsoft.com/en-us/library/1z2f6c2k.aspx 

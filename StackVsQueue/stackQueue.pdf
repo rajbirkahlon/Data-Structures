@@ -1,0 +1,16 @@
+Time complexity:
+enqueue			O(1)
+dequeue			O(n^2)
+front			O(n^2)
+size			O(1)
+isEmpty			O(1)
+isFull			O(1)
+
+The queue was designed using 2 stacks which were based on my lab06 arrayStack.h file.
+The goal was to only push to one at a time in order to enqueue. However, when dequeueing, the empty stack was used.
+Since the top of a stack points to the last element, pushing that top to the other stack until the once full stack was now empty gave us the top of the newly filled stack which is the front of the queue.
+The design for front was identical except we don't pop after filling our newly filled stack, leaving the top pointing to the front of the queue.
+Size function made use of the arrayStack.h's stackSize() function.
+The isEmpty() function used arrayStack.h's isEmpty() function.
+The isFull function used arrayStack.h's first checked which of the stacks(if any) were not empty, then it would tell you how far away from being full the stack was by subtracting the stack's allocated length 100 (from constructor in arrayStack..h file) by the size of the queue(size of the stack).
+ 
